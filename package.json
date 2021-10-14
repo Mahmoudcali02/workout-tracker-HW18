@@ -1,0 +1,25 @@
+{
+  "name": "workout-tracker-hw18",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mahmoudcali02/workout-tracker-HW18.git"
+  },
+  "author": "Mahmoud Cali",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mahmoudcali02/workout-tracker-HW18/issues"
+  },
+  "homepage": "https://github.com/Mahmoudcali02/workout-tracker-HW18#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.10",
+    "morgan": "^1.10.0"
+  }
+}
