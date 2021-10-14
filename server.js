@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 const db = require('./models');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3002;
 
 const app = express();
 
@@ -22,12 +22,6 @@ const MongoOpts = {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 };
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/exercisedb', MongoOpts)
-  .then(() => {
-    app.listen(PORT, () => {
-      // console.log(`App running on port ${PORT}!`);
-    });
-  });
 
 app.get('/exercise', (req, res) => {
   res.sendFile(path.join(`${__dirname}/public/exercise.html`));
@@ -36,3 +30,12 @@ app.get('/exercise', (req, res) => {
 app.get('/stats', (req, res) => {
   res.sendFile(path.join(`${__dirname}/public/stats.html`));
 });
+
+
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/exercisedb', MongoOpts)
+  .then(() => {
+    app.listen(PORT, () => {
+      console.log(`App running on port ${PORT}!`);
+    });
+  });
+
